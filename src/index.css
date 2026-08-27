@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Manrope', system-ui, -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --color-primary-green: #006A2F;
+  --color-deep-green: #005838;
+  --color-leaf-green: #438738;
+  --color-fresh-green: #2E9B57;
+  --color-light-green: #EAF6EE;
+  --color-soft-bg: #F4FAF6;
+  --color-dark-text: #15231B;
+  --color-body-text: #526158;
+  --color-border-green: #DDE9E1;
+
+  --shadow-premium-green: 0 10px 35px rgba(0, 80, 40, 0.08);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-body-text bg-white antialiased overflow-x-hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-dark-text tracking-tight;
+  }
+
+  /* Accessibility focus states */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary-green ring-offset-2;
+  }
+}
+
+/* Custom Utilities for Faint Node Grid Pattern background */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 106, 47, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 106, 47, 0.04) 1px, transparent 1px);
+}
+
+.bg-grid-pattern-dark {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
