@@ -41,18 +41,19 @@ export const sbnProfile = {
     heading: "Reliable Networking Hardware. Practical Infrastructure Solutions.",
     body: "CIS Tech Solutions carries a full range of New & Refurbished Networking Hardware. We serve customers pan India and globally, with active supplies to international markets like the UAE, China, South Korea, and the USA.",
     range: [
-      "Routers",
       "Switches",
-      "Firewalls",
-      "Wireless",
-      "VoIP Phones",
-      "Access Points",
       "Servers",
-      "Storage",
+      "Routers",
+      "Firewalls",
       "Server RAM",
-      "GPUs",
-      "Hard Disks",
-      "Other Networking Hardware"
+      "SFP Modules",
+      "Fiber Patch Cords",
+      "QSFP Modules",
+      "Network Interface Cards",
+      "Managed & Unmanaged Switches",
+      "VoIP Phones",
+      "Wireless Access Points",
+      "Line Cards & Supervisor Engines"
     ],
     offers: ["Sales", "Rental", "Technical Support"]
   },
@@ -76,16 +77,15 @@ export const sbnProfile = {
     "Flexible Rental Plans",
     "Expert Technical Support"
   ],
-  phones: ["9945544258", "9632176865"],
+  phones: ["6362314041"],
   whatsapp: "6362314041",
   emails: ["cistechsolutions0@gmail.com"],
-  address: "1st, 46/3, 1st Cross Rd, Old Gurappanapalya, BTM 1st Stage, Bengaluru, Karnataka 560029",
+  address: "GROUND FLOOR, NO 158, 10TH MAIN, BTM Layout Stage 1, Bengaluru, Bengaluru Urban, Karnataka, 560029",
   hours: {
-    days: "Monday – Friday: 11:00 AM – 7:00 PM",
-    time: "Saturday: 11:00 AM – 3:00 PM | Sunday: Closed"
+    days: "Monday to Friday - 11:00 AM to 7:00 PM",
+    time: "Saturday - 11:00 AM to 3:00 PM | Sunday - Off"
   },
   ceo: "Dadapeer",
-  gstin: "29EYUPD5781F1ZR",
   maps: {
     share: "https://maps.app.goo.gl/2ZExqkCKFWr6cs2n6",
     embed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15555.02641902381!2d77.58776264665238!3d12.923359040622639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae150006ddd0d5%3A0xc5a2c15fc0d89e4f!2sSBN%20networks!5e0!3m2!1sen!2sin!4v1787309366617!5m2!1sen!2sin",
@@ -103,86 +103,93 @@ export const sbnProducts: ProductCat[] = [
   {
     id: "switches",
     title: "Switches",
-    desc: "Enterprise managed, PoE, and fiber optical switches for core, distribution, and edge routing.",
+    desc: "Enterprise managed, PoE, and optical switches for core, distribution, and edge networks.",
     iconName: "Network",
-    imageUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/products/switches.png"
   },
   {
     id: "servers",
     title: "Servers",
-    desc: "Rack and tower servers configured with custom CPUs, RAM, power supplies, and storage arrays.",
+    desc: "Rack and tower servers configured with multi-core CPUs, ECC RAM, and high-density storage arrays.",
     iconName: "Server",
-    imageUrl: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/products/servers.png"
   },
   {
     id: "routers",
     title: "Routers",
-    desc: "High-capacity core and edge routers for offices, branches, and wide-area networking tunnels.",
+    desc: "High-capacity core and branch edge routers for enterprise WAN routing and VPN tunnels.",
     iconName: "Cpu",
-    imageUrl: "https://images.unsplash.com/photo-1544256718-3bcf237f3974?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/products/routers.png"
   },
   {
     id: "firewalls",
     title: "Firewalls",
-    desc: "Next-gen security appliances for secure perimeter shielding, threat checking, and VPN tunnels.",
+    desc: "Next-generation perimeter security appliances, threat detection engines, and gateway shields.",
     iconName: "Shield",
-    imageUrl: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/products/firewalls.png"
   },
   {
-    id: "ram",
+    id: "server-ram",
     title: "Server RAM",
-    desc: "High-speed DDR3, DDR4, and DDR5 ECC registered memory modules for server virtualization loads.",
+    desc: "High-performance ECC registered DDR3, DDR4, and DDR5 memory modules for virtualization workloads.",
     iconName: "Layers",
-    imageUrl: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/products/server-ram.png"
   },
   {
-    id: "sfp",
-    title: "SFP Transceivers",
-    desc: "1G, 10G, and 25G transceivers for reliable optical fiber links across enterprise switches.",
+    id: "sfp-modules",
+    title: "SFP Modules",
+    desc: "1G, 10G, and 25G optical transceivers for reliable short and long-range fiber switch uplinks.",
     iconName: "Zap",
-    imageUrl: "https://images.unsplash.com/photo-1563770660941-20978e870e26?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/products/sfp-modules.png"
   },
   {
-    id: "fiber",
-    title: "Fiber Optics",
-    desc: "Multi-mode and single-mode jumpers, pigtails, LIU drawers, and armored outdoor cables.",
+    id: "fiber-patch-cords",
+    title: "Fiber Patch Cords",
+    desc: "Single-mode and multi-mode fiber optic patch cables, duplex jumpers, and armored patch leads.",
     iconName: "Activity",
-    imageUrl: "https://images.unsplash.com/photo-1544256718-3bcf237f3974?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/products/fiber-patch-cords.png"
   },
   {
-    id: "qsfp",
-    title: "QSFP Transceivers",
-    desc: "40G and 100G transceivers designed for high-density core layouts and data center fabrics.",
+    id: "qsfp-modules",
+    title: "QSFP Modules",
+    desc: "40G and 100G high-density optical transceiver modules for data center core switch fabrics.",
     iconName: "Zap",
-    imageUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/products/qsfp-modules.png"
   },
   {
     id: "nic",
     title: "Network Interface Cards",
-    desc: "PCIe copper and fiber NICs for servers, storage controllers, and VM virtualization hosts.",
+    desc: "High-speed PCIe copper and optical fiber NIC adapters for enterprise servers and host nodes.",
     iconName: "Cpu",
-    imageUrl: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/products/nic.png"
   },
   {
-    id: "managed",
-    title: "Managed Switches",
-    desc: "Layer 2 and Layer 3 managed edge switches for department links and remote branches.",
+    id: "managed-switches",
+    title: "Managed & Unmanaged Switches",
+    desc: "Full Layer 2/3 managed switches and plug-and-play unmanaged switches for branch networks.",
     iconName: "Network",
-    imageUrl: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/products/managed-switches.png"
   },
   {
-    id: "voip",
+    id: "voip-phones",
     title: "VoIP Phones",
-    desc: "Cisco and Polycom VoIP desk IP phones, expansion keypads, and conference terminals.",
+    desc: "Enterprise IP desk phones, VoIP terminals, conference phones, and attendant extension pads.",
     iconName: "Phone",
-    imageUrl: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/products/voip-phones.png"
   },
   {
-    id: "linecards",
-    title: "Line Cards & Modules",
-    desc: "Supervisor engines, chassis line cards, power supplies, and transceiver uplink modules.",
+    id: "wireless-ap",
+    title: "Wireless Access Points",
+    desc: "High-speed Wi-Fi 6 / 6E indoor and outdoor enterprise wireless access points and controllers.",
+    iconName: "Wifi",
+    imageUrl: "/products/wireless-ap.png"
+  },
+  {
+    id: "line-cards",
+    title: "Line Cards & Supervisor Engines",
+    desc: "Chassis supervisor engines, interface line cards, power modules, and core switch expansion blades.",
     iconName: "HardDrive",
-    imageUrl: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/products/line-cards.png"
   }
 ];
 

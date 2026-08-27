@@ -1,20 +1,26 @@
 import { Link } from 'react-router-dom';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { sbnProfile } from '../../data/sbn_data';
 import { Container } from './Container';
 
 export function Footer() {
   return (
-    <footer className="bg-deep-green text-white pt-16 pb-8 border-t border-white/10">
+    <footer className="bg-[#0B1710] text-white pt-16 pb-8 border-t border-white/10">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand Col */}
           <div className="flex flex-col gap-4">
-            <Link to="/" className="flex items-center gap-3 self-start group">
-              <img
-                src="/logo.png"
-                alt="CIS Tech Solutions Logo"
-                className="h-10 w-auto object-contain shrink-0 transition-transform duration-300 group-hover:scale-102"
-              />
+            <Link to="/" className="inline-flex items-center gap-3 self-start group">
+              <div className="bg-white px-3.5 py-2 rounded-xl shadow-md transition-transform duration-300 group-hover:scale-105">
+                <img
+                  src="/logo.png"
+                  alt="CIS Tech Solutions Logo"
+                  className="h-10 md:h-12 w-auto object-contain shrink-0"
+                />
+              </div>
+              <span className="font-heading font-extrabold text-lg sm:text-xl tracking-tight text-fresh-green group-hover:text-white transition-colors">
+                CISTECH SOLUTIONS
+              </span>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs mt-2">
               {sbnProfile.descriptor}
@@ -76,23 +82,40 @@ export function Footer() {
             <h4 className="font-heading font-bold text-sm tracking-wider uppercase text-fresh-green mb-5">
               Contact Details
             </h4>
-            <p className="text-white/75 text-sm leading-relaxed mb-4">
-              {sbnProfile.address}
-            </p>
-            {sbnProfile.phones.map((phone, idx) => (
-              <p key={idx} className="text-white/75 text-sm mb-1.5">
-                <span className="text-white/45">Phone:</span>{' '}
-                <a href={`tel:+91${phone}`} className="hover:text-fresh-green transition-colors">
-                  +91 {phone}
+            <div className="flex flex-col gap-3.5">
+              {/* Address */}
+              <div className="flex items-start gap-3 text-white/75 text-sm leading-relaxed">
+                <MapPin className="w-4 h-4 text-fresh-green shrink-0 mt-0.5" />
+                <span>{sbnProfile.address}</span>
+              </div>
+
+              {/* Phone */}
+              {sbnProfile.phones.map((phone, idx) => (
+                <div key={idx} className="flex items-center gap-3 text-white/75 text-sm">
+                  <Phone className="w-4 h-4 text-fresh-green shrink-0" />
+                  <a href={`tel:+91${phone}`} className="hover:text-fresh-green transition-colors">
+                    +91 {phone}
+                  </a>
+                </div>
+              ))}
+
+              {/* Email */}
+              <div className="flex items-center gap-3 text-white/75 text-sm">
+                <Mail className="w-4 h-4 text-fresh-green shrink-0" />
+                <a href={`mailto:${sbnProfile.emails[0]}`} className="hover:text-fresh-green transition-colors">
+                  {sbnProfile.emails[0]}
                 </a>
-              </p>
-            ))}
-            <p className="text-white/75 text-sm">
-              <span className="text-white/45">Email:</span>{' '}
-              <a href={`mailto:${sbnProfile.emails[0]}`} className="hover:text-fresh-green transition-colors">
-                {sbnProfile.emails[0]}
-              </a>
-            </p>
+              </div>
+
+              {/* Working Hours */}
+              <div className="flex items-start gap-3 text-white/75 text-sm leading-relaxed">
+                <Clock className="w-4 h-4 text-fresh-green shrink-0 mt-0.5" />
+                <div>
+                  <p>{sbnProfile.hours.days}</p>
+                  <p className="mt-0.5">{sbnProfile.hours.time}</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

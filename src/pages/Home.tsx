@@ -7,14 +7,31 @@ import { Card } from '../components/ui/Card';
 import { SectionEyebrow } from '../components/ui/SectionEyebrow';
 import { IconBadge } from '../components/ui/IconBadge';
 import { NetworkNodeGraphic } from '../components/ui/NetworkNodeGraphic';
-import { ArrowRight, CheckCircle2, ShieldCheck } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ShieldCheck, MessageCircle } from 'lucide-react';
 
 export function Home() {
+  const getWhatsAppLink = (categoryName: string) => {
+    const message = `Hello CIS Tech Solutions, I am interested in your ${categoryName} hardware listings. Please share available models, pre-owned stock, and price details.`;
+    return `https://wa.me/91${sbnProfile.whatsapp}?text=${encodeURIComponent(message)}`;
+  };
   return (
     <div className="overflow-hidden">
       {/* 1. Hero Section */}
       <section className="relative min-h-[85vh] flex items-center bg-white overflow-hidden border-b border-border-green/20">
-        <div className="absolute inset-0 bg-grid-pattern opacity-60 pointer-events-none" />
+        {/* Hero Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero.png"
+            alt="Hero Background"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/40" />
+        </div>
+
+        {/* Grid Pattern Overlay */}
+        <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none z-5" />
+
+        {/* Interactive Network Node Graphic Animation */}
         <div className="absolute right-0 top-0 bottom-0 w-full lg:w-1/2 h-full z-10 opacity-40 lg:opacity-100 pointer-events-none lg:pointer-events-auto">
           <NetworkNodeGraphic nodeCount={55} />
         </div>
@@ -134,29 +151,48 @@ export function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {sbnProducts.slice(0, 8).map((prod, idx) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {sbnProducts.slice(0, 3).map((prod, idx) => (
               <motion.div
                 key={prod.id}
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.05 }}
+                transition={{ duration: 0.4, delay: idx * 0.1 }}
               >
-                <Card className="group h-full flex flex-col justify-between hover:border-primary-green">
-                  <div>
-                    <IconBadge name={prod.iconName} size="sm" className="mb-4" />
-                    <h3 className="font-heading font-bold text-base text-dark-text group-hover:text-primary-green transition-colors mb-2">
-                      {prod.title}
-                    </h3>
-                    <p className="text-xs text-body-text leading-relaxed mb-4">
-                      {prod.desc}
-                    </p>
+                <Card className="group h-full flex flex-col justify-between hover:border-primary-green p-0 overflow-hidden shadow-sm hover:shadow-md transition-all">
+                  <div className="relative h-[220px] w-full overflow-hidden bg-gray-100 border-b border-border-green/20">
+                    <img
+                      src={prod.imageUrl}
+                      alt={prod.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute top-3 right-3 z-20">
+                      <IconBadge name={prod.iconName} size="sm" />
+                    </div>
                   </div>
-                  <Link to="/products" className="inline-flex items-center text-primary-green font-heading text-xs font-bold gap-1 mt-4">
-                    <span>View Category</span>
-                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                  </Link>
+                  <div className="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                      <h3 className="font-heading font-bold text-lg text-dark-text group-hover:text-primary-green transition-colors mb-2">
+                        {prod.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-body-text leading-relaxed mb-4">
+                        {prod.desc}
+                      </p>
+                    </div>
+                    <div className="mt-4">
+                      <a
+                        href={getWhatsAppLink(prod.title)}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center justify-center gap-2.5 w-full py-3 px-4 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-heading font-bold text-sm rounded-lg shadow-[0_4px_14px_rgba(37,211,102,0.3)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.45)] transition-all duration-300 transform hover:-translate-y-0.5 group/btn"
+                      >
+                        <MessageCircle size={16} className="shrink-0 transition-transform duration-300 group-hover/btn:scale-110" />
+                        <span>Enquire on WhatsApp</span>
+                      </a>
+                    </div>
+                  </div>
                 </Card>
               </motion.div>
             ))}
@@ -164,7 +200,9 @@ export function Home() {
 
           <div className="text-center mt-12">
             <Link to="/products">
-              <Button variant="primary">View Full Product Catalog</Button>
+              <Button variant="primary" className="px-8 py-3 text-sm font-bold shadow-md">
+                View Full Product Catalog ({sbnProducts.length} Items)
+              </Button>
             </Link>
           </div>
         </Container>
@@ -254,27 +292,33 @@ export function Home() {
       </section>
 
       {/* 7. CTA Band */}
-      <section className="relative py-20 bg-gradient-to-br from-primary-green to-deep-green text-white overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern-dark opacity-30 pointer-events-none" />
-        <div className="absolute inset-0 opacity-15 pointer-events-none">
-          <NetworkNodeGraphic dark={true} nodeCount={25} />
-        </div>
-        <Container className="relative z-10 text-center max-w-3xl">
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-white mb-6 leading-tight">
-            Ready to Optimize Your Infrastructure Expenditure?
-          </h2>
-          <p className="font-sans text-white/80 text-base sm:text-lg mb-8 max-w-xl mx-auto leading-relaxed">
-            Get certified pre-owned routers, switch stacks, and direct support contracts. Drop us a request today.
-          </p>
-          <div className="flex justify-center gap-4 flex-wrap">
-            <Link to="/contact">
-              <Button variant="outline" className="bg-white/10 hover:bg-white text-primary-green hover:text-deep-green border-white/20">
-                Get a Consultation
-              </Button>
-            </Link>
-            <a href={`https://wa.me/91${sbnProfile.whatsapp}`} target="_blank" rel="noreferrer">
-              <Button variant="secondary">Message via WhatsApp</Button>
-            </a>
+      <section className="py-16 md:py-24 bg-soft-bg border-b border-border-green/20">
+        <Container>
+          <div className="relative rounded-2xl md:rounded-3xl bg-gradient-to-r from-[#006A2F] via-[#00572D] to-[#003E1F] text-white p-8 sm:p-12 md:p-16 shadow-2xl overflow-hidden border border-white/15">
+            <div className="absolute inset-0 bg-grid-pattern-dark opacity-25 pointer-events-none" />
+            <div className="absolute inset-0 opacity-15 pointer-events-none">
+              <NetworkNodeGraphic dark={true} nodeCount={25} />
+            </div>
+            <div className="relative z-10 text-center max-w-3xl mx-auto">
+              <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-white mb-6 leading-tight">
+                Ready to Optimize Your Infrastructure Expenditure?
+              </h2>
+              <p className="font-sans text-white/85 text-base sm:text-lg mb-8 max-w-xl mx-auto leading-relaxed">
+                Get certified pre-owned routers, switch stacks, and direct support contracts. Drop us a request today.
+              </p>
+              <div className="flex justify-center gap-4 flex-wrap">
+                <Link to="/contact">
+                  <Button variant="secondary" className="font-bold border-none shadow-lg px-7 py-3.5 text-base">
+                    Get a Consultation
+                  </Button>
+                </Link>
+                <a href={`https://wa.me/91${sbnProfile.whatsapp}`} target="_blank" rel="noreferrer">
+                  <Button variant="outline" className="font-bold border-white/40 text-white hover:bg-white/10 px-7 py-3.5 text-base">
+                    Message via WhatsApp
+                  </Button>
+                </a>
+              </div>
+            </div>
           </div>
         </Container>
       </section>

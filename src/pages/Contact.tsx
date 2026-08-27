@@ -6,7 +6,7 @@ import { sbnProfile } from '../data/sbn_data';
 import { Container } from '../components/layout/Container';
 import { SectionEyebrow } from '../components/ui/SectionEyebrow';
 import { Button } from '../components/ui/Button';
-import { Phone, Mail, MapPin, Clock, Loader2, CheckCircle, AlertCircle, Award } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Loader2, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
 
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -54,14 +54,13 @@ export function Contact() {
   return (
     <div>
       {/* 1. Page Header */}
-      <section className="bg-deep-green text-white py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern-dark opacity-30 pointer-events-none" />
-        <Container className="relative z-10">
-          <SectionEyebrow dark={true}>Contact Us</SectionEyebrow>
-          <h1 className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl mb-4 leading-tight tracking-tight">
+      <section className="bg-soft-bg py-10 md:py-14 border-b border-border-green/20">
+        <Container>
+          <SectionEyebrow>Contact Us</SectionEyebrow>
+          <h1 className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl text-dark-text mb-4 leading-tight tracking-tight">
             Consult With Our Engineers
           </h1>
-          <p className="font-sans text-white/70 max-w-2xl text-sm sm:text-base leading-relaxed">
+          <p className="font-sans text-body-text max-w-2xl text-sm sm:text-base leading-relaxed">
             Reach out via phone, email, or WhatsApp. We provide pan-India hardware shipments and technical configurations.
           </p>
         </Container>
@@ -95,6 +94,28 @@ export function Contact() {
                         </a>
                       </p>
                     ))}
+                  </div>
+                </div>
+
+                {/* WhatsApp Support */}
+                <div className="flex gap-4 items-start">
+                  <div className="w-10 h-10 rounded-full bg-light-green text-primary-green flex items-center justify-center shrink-0 border border-border-green/30">
+                    <MessageSquare size={18} />
+                  </div>
+                  <div>
+                    <h4 className="font-heading font-bold text-xs uppercase text-body-text tracking-wider mb-1">
+                      WhatsApp Direct
+                    </h4>
+                    <p className="font-sans text-sm font-semibold text-dark-text">
+                      <a
+                        href={`https://wa.me/91${sbnProfile.whatsapp}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="hover:text-primary-green transition-colors"
+                      >
+                        +91 {sbnProfile.whatsapp}
+                      </a>
+                    </p>
                   </div>
                 </div>
 
@@ -144,25 +165,11 @@ export function Contact() {
                     <p className="font-sans text-sm font-semibold text-dark-text leading-snug">
                       {sbnProfile.hours.days}
                       <br />
-                      {sbnProfile.hours.time} (IST)
+                      {sbnProfile.hours.time}
                     </p>
                   </div>
                 </div>
 
-                {/* GSTIN Details */}
-                <div className="flex gap-4 items-start">
-                  <div className="w-10 h-10 rounded-full bg-light-green text-primary-green flex items-center justify-center shrink-0 border border-border-green/30">
-                    <Award size={18} />
-                  </div>
-                  <div>
-                    <h4 className="font-heading font-bold text-xs uppercase text-body-text tracking-wider mb-1">
-                      GSTIN Identification
-                    </h4>
-                    <p className="font-mono text-sm font-semibold text-dark-text">
-                      {sbnProfile.gstin}
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -241,7 +248,7 @@ export function Contact() {
                       <input
                         id="phone"
                         type="tel"
-                        placeholder="e.g. +91 99455 44258"
+                        placeholder="e.g. +91 63623 14041"
                         {...register('phone')}
                         className={`w-full px-4 py-2.5 bg-white border rounded-[8px] text-sm focus:border-primary-green transition-colors ${
                           errors.phone ? 'border-red-500' : 'border-border-green/80'

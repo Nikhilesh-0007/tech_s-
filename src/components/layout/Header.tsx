@@ -34,13 +34,18 @@ export function Header() {
       }`}
     >
       <Container className="h-full flex items-center justify-between">
-        {/* Logo */}
+        {/* Logo & Brand Title */}
         <Link to="/" className="flex items-center gap-3 group">
           <img
             src="/logo.png"
             alt="CIS Tech Solutions Logo"
-            className="h-10 w-auto object-contain shrink-0 transition-transform duration-300 group-hover:scale-102"
+            className={`w-auto object-contain shrink-0 transition-all duration-300 group-hover:scale-105 ${
+              isScrolled ? 'h-10 md:h-11' : 'h-12 md:h-14'
+            }`}
           />
+          <span className="font-heading font-extrabold text-lg sm:text-xl tracking-tight text-primary-green group-hover:text-deep-green transition-colors">
+            CISTECH SOLUTIONS
+          </span>
         </Link>
 
         {/* Desktop Nav */}

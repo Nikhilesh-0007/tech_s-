@@ -10,14 +10,13 @@ export function Services() {
   return (
     <div>
       {/* 1. Page Header */}
-      <section className="bg-deep-green text-white py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern-dark opacity-30 pointer-events-none" />
-        <Container className="relative z-10">
-          <SectionEyebrow dark={true}>Our Services</SectionEyebrow>
-          <h1 className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl mb-4 leading-tight tracking-tight">
+      <section className="bg-soft-bg py-10 md:py-14 border-b border-border-green/20">
+        <Container>
+          <SectionEyebrow>Our Services</SectionEyebrow>
+          <h1 className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl text-dark-text mb-4 leading-tight tracking-tight">
             IT Engineering & Hardware Solutions
           </h1>
-          <p className="font-sans text-white/70 max-w-2xl text-sm sm:text-base leading-relaxed">
+          <p className="font-sans text-body-text max-w-2xl text-sm sm:text-base leading-relaxed">
             We provide comprehensive technical support, device flashing, rentals, and physical server room cable management.
           </p>
         </Container>
