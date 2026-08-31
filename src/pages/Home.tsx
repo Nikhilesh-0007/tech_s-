@@ -17,11 +17,11 @@ export function Home() {
   return (
     <div className="overflow-hidden">
       {/* 1. Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center bg-white overflow-hidden border-b border-border-green/20">
-        {/* Background Hero Image (Anchored to left on phone screens, right on desktop) */}
+      <section className="relative min-h-[85vh] flex items-center bg-[#f6fbf8] overflow-hidden border-b border-border-green/20">
+        {/* Background Hero Image */}
         <div
-          className="absolute inset-0 bg-no-repeat bg-[position:left_center] md:bg-[position:right_center] bg-cover md:bg-contain pointer-events-none opacity-90 lg:opacity-100"
-          style={{ backgroundImage: "url('/hero.png')" }}
+          className="absolute inset-0 bg-no-repeat bg-right bg-cover pointer-events-none opacity-95"
+          style={{ backgroundImage: "url('/hero.png')", backgroundPosition: 'right center' }}
         />
         <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-full lg:w-1/2 h-full z-10 opacity-30 lg:opacity-65 pointer-events-none lg:pointer-events-auto">
