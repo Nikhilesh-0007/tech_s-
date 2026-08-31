@@ -22,7 +22,7 @@ export interface ProcessItem {
 }
 
 export const sbnProfile = {
-  name: "CIS Tech Solutions",
+  name: "CISTECH Solutions",
   tagline: "Refurbished IT Solutions",
   descriptor: "New & Refurbished Networking Hardware | IT Infrastructure | Data Center | Telecom",
   hero: {
@@ -39,7 +39,7 @@ export const sbnProfile = {
   ],
   about: {
     heading: "Reliable Networking Hardware. Practical Infrastructure Solutions.",
-    body: "CIS Tech Solutions carries a full range of New & Refurbished Networking Hardware. We serve customers pan India and globally, with active supplies to international markets like the UAE, China, South Korea, and the USA.",
+    body: "CISTECH Solutions carries a full range of New & Refurbished Networking Hardware. We serve customers pan India and globally, with active supplies to international markets like the UAE, China, South Korea, and the USA.",
     range: [
       "Routers",
       "Switches",

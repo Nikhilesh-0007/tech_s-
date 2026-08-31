@@ -14,7 +14,7 @@ export function Footer() {
               <div className="w-16 h-16 rounded-2xl bg-white p-2 flex items-center justify-center shrink-0 shadow-lg transition-transform duration-300 group-hover:scale-105">
                 <img
                   src="/logo.png"
-                  alt="CIS Tech Solutions Logo"
+                  alt="CISTECH Solutions Logo"
                   className="w-full h-full object-contain"
                 />
               </div>

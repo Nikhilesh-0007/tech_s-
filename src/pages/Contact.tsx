@@ -341,7 +341,7 @@ export function Contact() {
       {/* 3. Google Map section */}
       <section className="h-[450px] w-full bg-soft-bg relative border-b border-border-green/20">
         <iframe
-          title="CIS Tech Solutions BTM Layout Google Map Locator"
+          title="CISTECH Solutions BTM Layout Google Map Locator"
           src={sbnProfile.maps.embed}
           className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-300"
           allowFullScreen

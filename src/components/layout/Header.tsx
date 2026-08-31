@@ -68,7 +68,7 @@ export function Header() {
           <Link to="/" className="flex items-center gap-3 group">
             <img
               src="/logo.png"
-              alt="CIS Tech Solutions Logo"
+              alt="CISTECH Solutions Logo"
               className="h-10 sm:h-12 w-auto object-contain shrink-0 transition-transform duration-300 group-hover:scale-105"
             />
             <span className="font-heading font-extrabold text-base sm:text-lg tracking-wider text-primary-green uppercase leading-none">

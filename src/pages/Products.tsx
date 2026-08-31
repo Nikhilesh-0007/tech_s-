@@ -9,7 +9,7 @@ import { MessageSquare } from 'lucide-react';
 
 export function Products() {
   const getWhatsAppLink = (categoryName: string) => {
-    const message = `Hello CIS Tech Solutions, I am interested in your ${categoryName} hardware listings. Please share available models, pre-owned stock, and price details.`;
+    const message = `Hello CISTECH Solutions, I am interested in your ${categoryName} hardware listings. Please share available models, pre-owned stock, and price details.`;
     return `https://wa.me/91${sbnProfile.whatsapp}?text=${encodeURIComponent(message)}`;
   };
 
