@@ -79,13 +79,13 @@ export const sbnProfile = {
   phones: ["6362314041"],
   whatsapp: "6362314041",
   emails: ["cistechsolutions0@gmail.com"],
-  address: "1st, 46/3, 1st Cross Rd, Old Gurappanapalya, BTM 1st Stage, Bengaluru, Karnataka 560029",
+  address: "GROUND FLOOR, NO 158, 10TH MAIN, BTM Layout Stage 1, Bengaluru, Bengaluru Urban, Karnataka, 560029",
   hours: {
     days: "Monday – Friday: 11:00 AM – 7:00 PM",
     time: "Saturday: 11:00 AM – 3:00 PM | Sunday: Closed"
   },
   ceo: "Dadapeer",
-  gstin: "29EYUPD5781F1ZR",
+  gstin: "29EALPA2570Q1Z4",
   maps: {
     share: "https://maps.app.goo.gl/2ZExqkCKFWr6cs2n6",
     embed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15555.02641902381!2d77.58776264665238!3d12.923359040622639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae150006ddd0d5%3A0xc5a2c15fc0d89e4f!2sSBN%20networks!5e0!3m2!1sen!2sin!4v1787309366617!5m2!1sen!2sin",
