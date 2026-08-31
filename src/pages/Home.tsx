@@ -18,10 +18,10 @@ export function Home() {
     <div className="overflow-hidden">
       {/* 1. Hero Section */}
       <section className="relative min-h-[85vh] flex items-center bg-[#f6fbf8] overflow-hidden border-b border-border-green/20">
-        {/* Background Hero Image */}
+        {/* Background Hero Image (Zoomed to left on small screens, right on desktop) */}
         <div
-          className="absolute inset-0 bg-no-repeat bg-right bg-cover pointer-events-none opacity-95"
-          style={{ backgroundImage: "url('/hero.png')", backgroundPosition: 'right center' }}
+          className="absolute inset-0 bg-no-repeat bg-[position:left_center] md:bg-[position:right_center] bg-cover pointer-events-none opacity-95"
+          style={{ backgroundImage: "url('/hero.png')" }}
         />
         <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-full lg:w-1/2 h-full z-10 opacity-30 lg:opacity-65 pointer-events-none lg:pointer-events-auto">
