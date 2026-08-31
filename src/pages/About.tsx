@@ -9,11 +9,13 @@ export function About() {
   return (
     <div>
       {/* 1. Page Header */}
-      <section className="bg-soft-bg py-10 md:py-14 border-b border-border-green/20">
-        <Container>
+      <section className="bg-gradient-to-b from-[#eaf6ee] to-[#f4faf6] text-dark-text py-16 sm:py-20 relative overflow-hidden border-b border-border-green/40">
+        <div className="absolute inset-0 bg-grid-pattern opacity-50 pointer-events-none" />
+        <Container className="relative z-10">
           <SectionEyebrow>About Us</SectionEyebrow>
           <h1 className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl text-dark-text mb-4 leading-tight tracking-tight">
-            Reliable Networking Hardware.<br />Practical Infrastructure.
+            Reliable Networking Hardware.<br />
+            <span className="text-primary-green">Practical Infrastructure.</span>
           </h1>
           <p className="font-sans text-body-text max-w-2xl text-sm sm:text-base leading-relaxed">
             {sbnProfile.descriptor}
@@ -42,7 +44,10 @@ export function About() {
                   Operational Credentials
                 </div>
                 <div className="text-sm font-heading font-bold text-dark-text">
-                  Management / Administrator: <span className="text-primary-green">{sbnProfile.ceo}</span>
+                  GSTIN Verification: <span className="font-mono text-primary-green">{sbnProfile.gstin}</span>
+                </div>
+                <div className="text-sm font-heading font-bold text-dark-text">
+                  CEO / Administrator: <span className="text-primary-green">{sbnProfile.ceo}</span>
                 </div>
               </div>
             </div>

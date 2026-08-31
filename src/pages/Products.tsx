@@ -4,7 +4,8 @@ import { Container } from '../components/layout/Container';
 import { SectionEyebrow } from '../components/ui/SectionEyebrow';
 import { Card } from '../components/ui/Card';
 import { IconBadge } from '../components/ui/IconBadge';
-import { MessageCircle } from 'lucide-react';
+import { Button } from '../components/ui/Button';
+import { MessageSquare } from 'lucide-react';
 
 export function Products() {
   const getWhatsAppLink = (categoryName: string) => {
@@ -15,11 +16,12 @@ export function Products() {
   return (
     <div>
       {/* 1. Page Header */}
-      <section className="bg-soft-bg py-10 md:py-14 border-b border-border-green/20">
-        <Container>
+      <section className="bg-gradient-to-b from-[#eaf6ee] to-[#f4faf6] text-dark-text py-16 sm:py-20 relative overflow-hidden border-b border-border-green/40">
+        <div className="absolute inset-0 bg-grid-pattern opacity-50 pointer-events-none" />
+        <Container className="relative z-10">
           <SectionEyebrow>Products Catalog</SectionEyebrow>
           <h1 className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl text-dark-text mb-4 leading-tight tracking-tight">
-            New & Refurbished Networking Gear
+            New &amp; Refurbished <span className="text-primary-green">Networking Gear</span>
           </h1>
           <p className="font-sans text-body-text max-w-2xl text-sm sm:text-base leading-relaxed">
             PAN-India sourcing for routers, managed switch configurations, SFP modules, and high-density computing servers.
@@ -39,16 +41,16 @@ export function Products() {
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ duration: 0.4, delay: Math.min(0.2, idx * 0.05) }}
               >
-                <Card className="group h-full flex flex-col justify-between hover:border-primary-green p-0 overflow-hidden">
+                <Card className="group h-full flex flex-col justify-between hover:border-primary-green p-0 overflow-hidden shadow-sm hover:shadow-md transition-all">
                   {/* Image container */}
-                  <div className="relative h-[240px] md:h-[260px] w-full overflow-hidden bg-gray-100 border-b border-border-green/20">
+                  <div className="relative h-56 bg-slate-50 border-b border-border-green/20 p-5 flex items-center justify-center overflow-hidden">
                     <img
                       src={prod.imageUrl}
                       alt={prod.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
-                    <div className="absolute top-4 right-4 z-20">
+                    <div className="absolute top-3 right-3 z-20">
                       <IconBadge name={prod.iconName} size="sm" />
                     </div>
                   </div>
@@ -70,10 +72,15 @@ export function Products() {
                         href={getWhatsAppLink(prod.title)}
                         target="_blank"
                         rel="noreferrer"
-                        className="flex items-center justify-center gap-2.5 w-full py-3 px-4 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-heading font-bold text-sm rounded-lg shadow-[0_4px_14px_rgba(37,211,102,0.3)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.45)] transition-all duration-300 transform hover:-translate-y-0.5 group/btn"
+                        className="block w-full"
                       >
-                        <MessageCircle size={16} className="shrink-0 transition-transform duration-300 group-hover/btn:scale-110" />
-                        <span>Enquire on WhatsApp</span>
+                        <Button
+                          variant="primary"
+                          className="w-full py-2.5 text-xs flex items-center justify-center gap-2 shadow-sm"
+                        >
+                          <MessageSquare size={14} />
+                          <span>Request WhatsApp Quote</span>
+                        </Button>
                       </a>
                     </div>
                   </div>

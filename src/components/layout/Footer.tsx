@@ -1,28 +1,33 @@
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { sbnProfile } from '../../data/sbn_data';
 import { Container } from './Container';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-[#0B1710] text-white pt-16 pb-8 border-t border-white/10">
+    <footer className="bg-[#080d0a] text-white pt-16 pb-8 border-t-2 border-primary-green/40">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand Col */}
           <div className="flex flex-col gap-4">
-            <Link to="/" className="inline-flex items-center gap-3 self-start group">
-              <div className="bg-white px-3.5 py-2 rounded-xl shadow-md transition-transform duration-300 group-hover:scale-105">
+            <Link to="/" className="flex items-center gap-4 group self-start">
+              <div className="w-16 h-16 rounded-2xl bg-white p-2 flex items-center justify-center shrink-0 shadow-lg transition-transform duration-300 group-hover:scale-105">
                 <img
                   src="/logo.png"
                   alt="CIS Tech Solutions Logo"
-                  className="h-10 md:h-12 w-auto object-contain shrink-0"
+                  className="w-full h-full object-contain"
                 />
               </div>
-              <span className="font-heading font-extrabold text-lg sm:text-xl tracking-tight text-fresh-green group-hover:text-white transition-colors">
-                CISTECH SOLUTIONS
-              </span>
+              <div className="flex flex-col">
+                <span className="font-heading font-extrabold text-lg tracking-wider text-white uppercase leading-none">
+                  CISTECH
+                </span>
+                <span className="font-heading font-bold text-xs tracking-widest text-fresh-green uppercase mt-1.5">
+                  Solutions
+                </span>
+              </div>
             </Link>
-            <p className="text-white/60 text-sm leading-relaxed max-w-xs mt-2">
+            <p className="text-gray-300 text-sm leading-relaxed max-w-xs mt-2">
               {sbnProfile.descriptor}
             </p>
           </div>
@@ -43,7 +48,7 @@ export function Footer() {
                 <li key={idx}>
                   <Link
                     to={link.href}
-                    className="text-white/75 hover:text-fresh-green text-sm transition-colors duration-200"
+                    className="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all duration-200 text-sm"
                   >
                     {link.label}
                   </Link>
@@ -68,7 +73,7 @@ export function Footer() {
                 <li key={idx}>
                   <Link
                     to="/services"
-                    className="text-white/75 hover:text-fresh-green text-sm transition-colors duration-200"
+                    className="text-gray-300 hover:text-white hover:translate-x-1 inline-block transition-all duration-200 text-sm"
                   >
                     {service}
                   </Link>
@@ -82,37 +87,32 @@ export function Footer() {
             <h4 className="font-heading font-bold text-sm tracking-wider uppercase text-fresh-green mb-5">
               Contact Details
             </h4>
-            <div className="flex flex-col gap-3.5">
-              {/* Address */}
-              <div className="flex items-start gap-3 text-white/75 text-sm leading-relaxed">
-                <MapPin className="w-4 h-4 text-fresh-green shrink-0 mt-0.5" />
-                <span>{sbnProfile.address}</span>
+            <div className="flex flex-col gap-3.5 text-sm text-gray-200">
+              <div className="flex items-start gap-2.5">
+                <MapPin size={16} className="text-fresh-green shrink-0 mt-1" />
+                <p className="leading-relaxed text-xs sm:text-sm text-gray-300">{sbnProfile.address}</p>
               </div>
-
-              {/* Phone */}
-              {sbnProfile.phones.map((phone, idx) => (
-                <div key={idx} className="flex items-center gap-3 text-white/75 text-sm">
-                  <Phone className="w-4 h-4 text-fresh-green shrink-0" />
-                  <a href={`tel:+91${phone}`} className="hover:text-fresh-green transition-colors">
-                    +91 {phone}
-                  </a>
+              <div className="flex items-center gap-2.5">
+                <Phone size={15} className="text-fresh-green shrink-0" />
+                <div className="flex flex-wrap gap-x-2 text-xs sm:text-sm">
+                  {sbnProfile.phones.map((phone, idx) => (
+                    <a key={idx} href={`tel:+91${phone}`} className="text-gray-200 hover:text-white transition-colors">
+                      +91 {phone}{idx < sbnProfile.phones.length - 1 ? ',' : ''}
+                    </a>
+                  ))}
                 </div>
-              ))}
-
-              {/* Email */}
-              <div className="flex items-center gap-3 text-white/75 text-sm">
-                <Mail className="w-4 h-4 text-fresh-green shrink-0" />
-                <a href={`mailto:${sbnProfile.emails[0]}`} className="hover:text-fresh-green transition-colors">
+              </div>
+              <div className="flex items-center gap-2.5 text-xs sm:text-sm">
+                <Mail size={15} className="text-fresh-green shrink-0" />
+                <a href={`mailto:${sbnProfile.emails[0]}`} className="text-gray-200 hover:text-white transition-colors">
                   {sbnProfile.emails[0]}
                 </a>
               </div>
-
-              {/* Working Hours */}
-              <div className="flex items-start gap-3 text-white/75 text-sm leading-relaxed">
-                <Clock className="w-4 h-4 text-fresh-green shrink-0 mt-0.5" />
+              <div className="flex items-start gap-2.5 text-xs text-gray-400 pt-1">
+                <Clock size={15} className="text-fresh-green shrink-0 mt-0.5" />
                 <div>
                   <p>{sbnProfile.hours.days}</p>
-                  <p className="mt-0.5">{sbnProfile.hours.time}</p>
+                  <p>{sbnProfile.hours.time}</p>
                 </div>
               </div>
             </div>
@@ -121,8 +121,8 @@ export function Footer() {
 
         <hr className="border-white/10 my-8" />
 
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
-          <p>© {new Date().getFullYear()} CIS Tech Solutions. All rights reserved.</p>
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+          <p>© {new Date().getFullYear()} CISTECH Solutions. All rights reserved.</p>
           <div className="flex gap-6">
             <Link to="/contact" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link to="/contact" className="hover:text-white transition-colors">Terms & Conditions</Link>
@@ -133,3 +133,4 @@ export function Footer() {
   );
 }
 export default Footer;
+

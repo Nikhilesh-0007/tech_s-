@@ -7,7 +7,7 @@ import { Card } from '../components/ui/Card';
 import { SectionEyebrow } from '../components/ui/SectionEyebrow';
 import { IconBadge } from '../components/ui/IconBadge';
 import { NetworkNodeGraphic } from '../components/ui/NetworkNodeGraphic';
-import { ArrowRight, CheckCircle2, ShieldCheck, MessageCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ShieldCheck, MessageSquare } from 'lucide-react';
 
 export function Home() {
   const getWhatsAppLink = (categoryName: string) => {
@@ -18,21 +18,13 @@ export function Home() {
     <div className="overflow-hidden">
       {/* 1. Hero Section */}
       <section className="relative min-h-[85vh] flex items-center bg-white overflow-hidden border-b border-border-green/20">
-        {/* Hero Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/hero.png"
-            alt="Hero Background"
-            className="w-full h-full object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/40" />
-        </div>
-
-        {/* Grid Pattern Overlay */}
-        <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none z-5" />
-
-        {/* Interactive Network Node Graphic Animation */}
-        <div className="absolute right-0 top-0 bottom-0 w-full lg:w-1/2 h-full z-10 opacity-40 lg:opacity-100 pointer-events-none lg:pointer-events-auto">
+        {/* Background Hero Image (Anchored to left on phone screens, right on desktop) */}
+        <div
+          className="absolute inset-0 bg-no-repeat bg-[position:left_center] md:bg-[position:right_center] bg-cover md:bg-contain pointer-events-none opacity-90 lg:opacity-100"
+          style={{ backgroundImage: "url('/hero.png')" }}
+        />
+        <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-full lg:w-1/2 h-full z-10 opacity-30 lg:opacity-65 pointer-events-none lg:pointer-events-auto">
           <NetworkNodeGraphic nodeCount={55} />
         </div>
 
@@ -101,7 +93,7 @@ export function Home() {
                 className="w-full h-full object-cover"
               />
             </motion.div>
-            
+
             {/* Content */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -117,7 +109,7 @@ export function Home() {
               <p className="font-sans text-body-text leading-relaxed mb-6">
                 {sbnProfile.about.body}
               </p>
-              
+
               {/* Features bullets */}
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {sbnProfile.about.range.slice(0, 6).map((item, idx) => (
@@ -155,41 +147,51 @@ export function Home() {
             {sbnProducts.slice(0, 3).map((prod, idx) => (
               <motion.div
                 key={prod.id}
-                initial={{ opacity: 0, y: 15 }}
+                initial={{ opacity: 0, y: 25 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.1 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.4, delay: Math.min(0.2, idx * 0.05) }}
               >
                 <Card className="group h-full flex flex-col justify-between hover:border-primary-green p-0 overflow-hidden shadow-sm hover:shadow-md transition-all">
-                  <div className="relative h-[220px] w-full overflow-hidden bg-gray-100 border-b border-border-green/20">
+                  {/* Image container */}
+                  <div className="relative h-56 bg-slate-50 border-b border-border-green/20 p-5 flex items-center justify-center overflow-hidden">
                     <img
                       src={prod.imageUrl}
                       alt={prod.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
                     <div className="absolute top-3 right-3 z-20">
                       <IconBadge name={prod.iconName} size="sm" />
                     </div>
                   </div>
-                  <div className="p-6 flex-grow flex flex-col justify-between">
+
+                  {/* Body Content */}
+                  <div className="p-6 md:p-8 flex-grow flex flex-col justify-between">
                     <div>
-                      <h3 className="font-heading font-bold text-lg text-dark-text group-hover:text-primary-green transition-colors mb-2">
+                      <h3 className="font-heading font-bold text-lg text-dark-text group-hover:text-primary-green transition-colors mb-3">
                         {prod.title}
                       </h3>
-                      <p className="text-xs sm:text-sm text-body-text leading-relaxed mb-4">
+                      <p className="text-xs sm:text-sm text-body-text leading-relaxed mb-6">
                         {prod.desc}
                       </p>
                     </div>
+
+                    {/* Inquiry Actions */}
                     <div className="mt-4">
                       <a
                         href={getWhatsAppLink(prod.title)}
                         target="_blank"
                         rel="noreferrer"
-                        className="flex items-center justify-center gap-2.5 w-full py-3 px-4 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-heading font-bold text-sm rounded-lg shadow-[0_4px_14px_rgba(37,211,102,0.3)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.45)] transition-all duration-300 transform hover:-translate-y-0.5 group/btn"
+                        className="block w-full"
                       >
-                        <MessageCircle size={16} className="shrink-0 transition-transform duration-300 group-hover/btn:scale-110" />
-                        <span>Enquire on WhatsApp</span>
+                        <Button
+                          variant="primary"
+                          className="w-full py-2.5 text-xs flex items-center justify-center gap-2 shadow-sm font-semibold bg-[#25D366] hover:bg-[#20bd5a] text-white border-none"
+                        >
+                          <MessageSquare size={14} />
+                          <span>Enquire on WhatsApp</span>
+                        </Button>
                       </a>
                     </div>
                   </div>
@@ -200,8 +202,8 @@ export function Home() {
 
           <div className="text-center mt-12">
             <Link to="/products">
-              <Button variant="primary" className="px-8 py-3 text-sm font-bold shadow-md">
-                View Full Product Catalog ({sbnProducts.length} Items)
+              <Button variant="primary" className="px-8 py-3 bg-deep-green hover:bg-primary-green">
+                View All Products (10+ Items)
               </Button>
             </Link>
           </div>
@@ -292,30 +294,31 @@ export function Home() {
       </section>
 
       {/* 7. CTA Band */}
-      <section className="py-16 md:py-24 bg-soft-bg border-b border-border-green/20">
+      <section className="py-20 bg-soft-bg border-t border-border-green/20">
         <Container>
-          <div className="relative rounded-2xl md:rounded-3xl bg-gradient-to-r from-[#006A2F] via-[#00572D] to-[#003E1F] text-white p-8 sm:p-12 md:p-16 shadow-2xl overflow-hidden border border-white/15">
-            <div className="absolute inset-0 bg-grid-pattern-dark opacity-25 pointer-events-none" />
-            <div className="absolute inset-0 opacity-15 pointer-events-none">
-              <NetworkNodeGraphic dark={true} nodeCount={25} />
-            </div>
-            <div className="relative z-10 text-center max-w-3xl mx-auto">
-              <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-white mb-6 leading-tight">
+          <div className="relative rounded-3xl bg-gradient-to-br from-[#006A2F] via-[#005838] to-[#004225] text-white p-10 sm:p-14 lg:p-16 text-center overflow-hidden shadow-2xl border border-primary-green/30">
+            <div className="absolute inset-0 bg-grid-pattern-dark opacity-30 pointer-events-none" />
+            <div className="absolute -top-24 -right-24 w-80 h-80 bg-leaf-green/20 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-24 -left-24 w-80 h-80 bg-primary-green/20 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="relative z-10 max-w-3xl mx-auto">
+              <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-white mb-5 leading-tight">
                 Ready to Optimize Your Infrastructure Expenditure?
               </h2>
-              <p className="font-sans text-white/85 text-base sm:text-lg mb-8 max-w-xl mx-auto leading-relaxed">
+              <p className="font-sans text-white/90 text-base sm:text-lg mb-8 max-w-xl mx-auto leading-relaxed">
                 Get certified pre-owned routers, switch stacks, and direct support contracts. Drop us a request today.
               </p>
               <div className="flex justify-center gap-4 flex-wrap">
                 <Link to="/contact">
-                  <Button variant="secondary" className="font-bold border-none shadow-lg px-7 py-3.5 text-base">
+                  <button className="inline-flex items-center justify-center font-heading font-bold text-sm bg-white text-[#005838] hover:bg-slate-100 transition-all duration-300 rounded-lg px-7 py-3.5 shadow-lg active:scale-98 cursor-pointer">
                     Get a Consultation
-                  </Button>
+                  </button>
                 </Link>
                 <a href={`https://wa.me/91${sbnProfile.whatsapp}`} target="_blank" rel="noreferrer">
-                  <Button variant="outline" className="font-bold border-white/40 text-white hover:bg-white/10 px-7 py-3.5 text-base">
-                    Message via WhatsApp
-                  </Button>
+                  <button className="inline-flex items-center justify-center gap-2 font-heading font-bold text-sm bg-[#25D366] text-white hover:bg-[#20bd5a] transition-all duration-300 rounded-lg px-7 py-3.5 shadow-lg active:scale-98 cursor-pointer">
+                    <MessageSquare size={16} className="text-white" />
+                    <span>Message via WhatsApp</span>
+                  </button>
                 </a>
               </div>
             </div>
@@ -326,3 +329,4 @@ export function Home() {
   );
 }
 export default Home;
+
