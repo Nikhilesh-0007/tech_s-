@@ -124,6 +124,17 @@ export function Footer() {
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
           <p>© {new Date().getFullYear()} CISTECH Solutions. All rights reserved.</p>
+          <p>
+            Developed by{' '}
+            <a
+              href="https://www.instagram.com/staffarc?igsh=NGI1ajBjank5aWF3"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-fresh-green hover:text-white font-semibold transition-colors"
+            >
+              StaffArc
+            </a>
+          </p>
           <div className="flex gap-6">
             <Link to="/contact" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link to="/contact" className="hover:text-white transition-colors">Terms & Conditions</Link>
