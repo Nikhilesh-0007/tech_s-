@@ -6,7 +6,7 @@ import { sbnProfile } from '../data/sbn_data';
 import { Container } from '../components/layout/Container';
 import { SectionEyebrow } from '../components/ui/SectionEyebrow';
 import { Button } from '../components/ui/Button';
-import { Phone, Mail, MapPin, Clock, Loader2, CheckCircle, AlertCircle, Award } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
 
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -145,21 +145,6 @@ export function Contact() {
                       {sbnProfile.hours.days}
                       <br />
                       {sbnProfile.hours.time} (IST)
-                    </p>
-                  </div>
-                </div>
-
-                {/* GSTIN Details */}
-                <div className="flex gap-4 items-start">
-                  <div className="w-10 h-10 rounded-full bg-light-green text-primary-green flex items-center justify-center shrink-0 border border-border-green/30">
-                    <Award size={18} />
-                  </div>
-                  <div>
-                    <h4 className="font-heading font-bold text-xs uppercase text-body-text tracking-wider mb-1">
-                      GSTIN Identification
-                    </h4>
-                    <p className="font-mono text-sm font-semibold text-dark-text">
-                      {sbnProfile.gstin}
                     </p>
                   </div>
                 </div>

@@ -39,7 +39,7 @@ export const sbnProfile = {
   ],
   about: {
     heading: "Reliable Networking Hardware. Practical Infrastructure Solutions.",
-    body: "CISTECH Solutions carries a full range of New & Refurbished Networking Hardware. We serve customers pan India and globally.",
+    body: "Cistech Solutions carries a full range of New & Refurbished Networking Hardware. We serve customers pan India and globally.",
     range: [
       "Routers",
       "Switches",
@@ -84,11 +84,10 @@ export const sbnProfile = {
     days: "Monday – Friday: 11:00 AM – 7:00 PM",
     time: "Saturday: 11:00 AM – 3:00 PM | Sunday: Closed"
   },
-  gstin: "29EALPA2570Q1Z4",
   maps: {
-    share: "https://maps.app.goo.gl/2ZExqkCKFWr6cs2n6",
-    embed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15555.02641902381!2d77.58776264665238!3d12.923359040622639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae150006ddd0d5%3A0xc5a2c15fc0d89e4f!2sSBN%20networks!5e0!3m2!1sen!2sin!4v1787309366617!5m2!1sen!2sin",
-    directions: "https://www.google.com/maps/dir/?api=1&destination=SBN%20networks"
+    share: "https://maps.google.com/?q=CISTECH+Solutions,+158,+10th+Main+Rd,+BTM+Layout+1st+Stage,+Bengaluru,+Karnataka+560029",
+    embed: "https://maps.google.com/maps?q=CISTECH+Solutions,+158,+10th+Main+Rd,+BTM+Layout+1st+Stage,+Bengaluru,+Karnataka+560029&t=&z=16&ie=UTF8&iwloc=&output=embed",
+    directions: "https://www.google.com/maps/dir/?api=1&destination=CISTECH+Solutions,+158,+10th+Main+Rd,+BTM+Layout+1st+Stage,+Bengaluru,+Karnataka+560029"
   },
   social: {
     youtube: "https://www.youtube.com/@SBNNETWORKS42",
@@ -178,7 +177,7 @@ export const sbnServices: ServiceCat[] = [
     short: "Firmware updates, Cisco IOS/JunOS flashing, OS patching, software troubleshooting, and license configuration across all network devices.",
     body: "Keep your networking hardware protected and running optimally. We handle flashing new versions, checking licenses, installing firmware patches, and resetting OS credentials across routers, switches, and firewalls.",
     iconName: "Cpu",
-    imageUrl: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/products/ios_update.png"
   },
   {
     id: "troubleshooting-support",
@@ -186,7 +185,7 @@ export const sbnServices: ServiceCat[] = [
     short: "Remote and on-site fault isolation, device configuration fixes, network link diagnostics, and hardware replacement support.",
     body: "SLA-backed reactive troubleshooting and technical assistance. Our network engineers help you identify loop events, interface drops, IP route routing issues, and configure backup parameters.",
     iconName: "Wrench",
-    imageUrl: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800&auto=format&fit=crop"
+    imageUrl: "/products/tech_img.jpeg"
   },
   {
     id: "datacenter-infra",
