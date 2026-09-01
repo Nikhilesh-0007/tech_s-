@@ -85,9 +85,9 @@ export const sbnProfile = {
     time: "Saturday: 11:00 AM – 3:00 PM | Sunday: Closed"
   },
   maps: {
-    share: "https://maps.google.com/?q=CISTECH+Solutions,+158,+10th+Main+Rd,+BTM+Layout+1st+Stage,+Bengaluru,+Karnataka+560029",
-    embed: "https://maps.google.com/maps?q=CISTECH+Solutions,+158,+10th+Main+Rd,+BTM+Layout+1st+Stage,+Bengaluru,+Karnataka+560029&t=&z=16&ie=UTF8&iwloc=&output=embed",
-    directions: "https://www.google.com/maps/dir/?api=1&destination=CISTECH+Solutions,+158,+10th+Main+Rd,+BTM+Layout+1st+Stage,+Bengaluru,+Karnataka+560029"
+    share: "https://maps.google.com/?q=12.9184558,77.6071031",
+    embed: "https://maps.google.com/maps?q=12.9184558,77.6071031&t=&z=17&ie=UTF8&iwloc=&output=embed",
+    directions: "https://www.google.com/maps/dir/?api=1&destination=12.9184558,77.6071031"
   },
   social: {
     youtube: "https://www.youtube.com/@SBNNETWORKS42",
