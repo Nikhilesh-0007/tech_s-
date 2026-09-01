@@ -78,7 +78,8 @@ export const sbnProfile = {
   ],
   phones: ["6362314041"],
   whatsapp: "6362314041",
-  emails: ["cistechsolutions0@gmail.com"],
+  emails: ["info@cistechsolutions.in"],
+  gst: "29EALPA2570Q1Z4",
   address: "GROUND FLOOR, NO 158, 10TH MAIN, BTM Layout Stage 1, Bengaluru, Bengaluru Urban, Karnataka, 560029",
   hours: {
     days: "Monday – Friday: 11:00 AM – 7:00 PM",
