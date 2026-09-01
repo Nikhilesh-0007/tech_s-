@@ -11,7 +11,7 @@ import { ArrowRight, CheckCircle2, ShieldCheck, MessageSquare } from 'lucide-rea
 
 export function Home() {
   const getWhatsAppLink = (categoryName: string) => {
-    const message = `Hello CISTECH Solutions, I am interested in your ${categoryName} hardware listings. Please share available models, pre-owned stock, and price details.`;
+    const message = `Hello CISTECH Solutions, I am interested in your ${categoryName} hardware listings. Please share available models, pre-owned stock and price details.`;
     return `https://wa.me/91${sbnProfile.whatsapp}?text=${encodeURIComponent(message)}`;
   };
   return (
@@ -139,7 +139,7 @@ export function Home() {
               Browse Our Networking Hardware Products
             </h2>
             <p className="font-sans text-body-text leading-relaxed mt-4">
-              Explore our range of router, switch, transceiver, and server nodes. We maintain full hardware stocks for immediate dispatch.
+              Explore our range of router, switch, transceiver and server nodes. We maintain full hardware stocks for immediate dispatch.
             </p>
           </div>
 
@@ -256,10 +256,10 @@ export function Home() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <SectionEyebrow>Engineering Services</SectionEyebrow>
             <h2 className="font-heading font-bold text-3xl sm:text-4xl text-dark-text mt-2 animate-pulse-slow">
-              IOS Upgrades, rentals, and Support
+              IOS Upgrades, rentals and Support
             </h2>
             <p className="font-sans text-body-text leading-relaxed mt-4">
-              In addition to supplying hardware, we provide remote OS configurations, network repairs, and temporary hardware leases.
+              In addition to supplying hardware, we provide remote OS configurations, network repairs and temporary hardware leases.
             </p>
           </div>
 
@@ -306,7 +306,7 @@ export function Home() {
                 Ready to Optimize Your Infrastructure Expenditure?
               </h2>
               <p className="font-sans text-white/90 text-base sm:text-lg mb-8 max-w-xl mx-auto leading-relaxed">
-                Get certified pre-owned routers, switch stacks, and direct support contracts. Drop us a request today.
+                Get certified pre-owned routers, switch stacks and direct support contracts. Drop us a request today.
               </p>
               <div className="flex justify-center gap-4 flex-wrap">
                 <Link to="/contact">

@@ -69,7 +69,7 @@ export function About() {
               Our 5-Stage Verification Timeline
             </h2>
             <p className="font-sans text-body-text leading-relaxed mt-4">
-              We check every card, engine, and transceiver. Below is the workflow each pre-owned component passes through.
+              We check every card, engine and transceiver. Below is the workflow each pre-owned component passes through.
             </p>
           </div>
 
@@ -124,7 +124,7 @@ export function About() {
                     {item}
                   </h4>
                   <p className="text-xs sm:text-sm text-body-text leading-relaxed">
-                    Sourced responsibly, rigorously verified, and dispatched globally with warranty coverage details.
+                    Sourced responsibly, rigorously verified and dispatched globally with warranty coverage details.
                   </p>
                 </div>
               </div>

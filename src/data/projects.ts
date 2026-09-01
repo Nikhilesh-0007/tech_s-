@@ -29,7 +29,7 @@ export const projectsData: ProjectItem[] = [
     title: "Healthcare Facility IP Surveillance",
     category: "CCTV & Security",
     location: "Chennai, India",
-    description: "Installation of a 150+ camera IP CCTV surveillance system with AI analytics, failover NVR recording, and centralized security room monitors.",
+    description: "Installation of a 150+ camera IP CCTV surveillance system with AI analytics, failover NVR recording and centralized security room monitors.",
     imageUrl: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800&auto=format&fit=crop"
   },
   {
@@ -45,7 +45,7 @@ export const projectsData: ProjectItem[] = [
     title: "Luxury Hotel Network & Card Access",
     category: "Hospitality IT & Access Control",
     location: "Mumbai, India",
-    description: "Deploying high-speed guest Wi-Fi gateways, lobby fiber points, and smart RFID hotel door lock server system.",
+    description: "Deploying high-speed guest Wi-Fi gateways, lobby fiber points and smart RFID hotel door lock server system.",
     imageUrl: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop"
   },
   {

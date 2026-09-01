@@ -9,7 +9,7 @@ export const benefitsData: BenefitItem[] = [
   {
     id: "reliable-infra",
     title: "Reliable Infrastructure",
-    description: "Every cabling run is certified, and every device is stress-tested. We design systems with active failovers to prevent single points of failure.",
+    description: "Every cabling run is certified and every device is stress-tested. We design systems with active failovers to prevent single points of failure.",
     iconName: "Zap"
   },
   {
@@ -33,13 +33,13 @@ export const benefitsData: BenefitItem[] = [
   {
     id: "end-to-end-support",
     title: "End-to-End Support",
-    description: "From initial predictive site survey and architectural design to passive wiring, active configuration, and ongoing SLA helpdesk support.",
+    description: "From initial predictive site survey and architectural design to passive wiring, active configuration and ongoing SLA helpdesk support.",
     iconName: "Headphones"
   },
   {
     id: "customer-focused",
     title: "Customer Focused",
-    description: "We don't offer generic templates. We build custom technology matrices aligned directly to your specific layout, seat count, and budget.",
+    description: "We don't offer generic templates. We build custom technology matrices aligned directly to your specific layout, seat count and budget.",
     iconName: "Users"
   }
 ];
