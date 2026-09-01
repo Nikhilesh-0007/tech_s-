@@ -174,40 +174,40 @@ export const sbnServices: ServiceCat[] = [
   {
     id: "os-upgrades",
     title: "IOS / OS Upgrades & Software Solutions",
-    short: "Firmware updates, Cisco IOS/JunOS flashing, OS patching, software troubleshooting, and license configuration across all network devices.",
-    body: "Keep your networking hardware protected and running optimally. We handle flashing new versions, checking licenses, installing firmware patches, and resetting OS credentials across routers, switches, and firewalls.",
+    short: "Firmware updates, Cisco IOS/JunOS flashing, OS patching, software troubleshooting and license configuration across all network devices.",
+    body: "Keep your networking hardware protected and running optimally. We handle flashing new versions, checking licenses, installing firmware patches and resetting OS credentials across routers, switches and firewalls.",
     iconName: "Cpu",
     imageUrl: "/products/ios_update.png"
   },
   {
     id: "troubleshooting-support",
     title: "Network Troubleshooting & Tech Support",
-    short: "Remote and on-site fault isolation, device configuration fixes, network link diagnostics, and hardware replacement support.",
-    body: "SLA-backed reactive troubleshooting and technical assistance. Our network engineers help you identify loop events, interface drops, IP route routing issues, and configure backup parameters.",
+    short: "Remote and on-site fault isolation, device configuration fixes, network link diagnostics and hardware replacement support.",
+    body: "SLA-backed reactive troubleshooting and technical assistance. Our network engineers help you identify loop events, interface drops, IP route routing issues and configure backup parameters.",
     iconName: "Wrench",
     imageUrl: "/products/tech_img.jpeg"
   },
   {
     id: "datacenter-infra",
     title: "Data Center Works & Infrastructure",
-    short: "Server room setups, structured fiber/copper cabling, rack integration, cable management, and PDU distribution deployment.",
-    body: "Physical rack-and-stack integration, structured patch panels cabling, labeled trunk runs, clean fiber path splicing, and cooling path coordination inside corporate server rooms.",
+    short: "Server room setups, structured fiber/copper cabling, rack integration, cable management and PDU distribution deployment.",
+    body: "Physical rack-and-stack integration, structured patch panels cabling, labeled trunk runs, clean fiber path splicing and cooling path coordination inside corporate server rooms.",
     iconName: "Layers",
     imageUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop"
   },
   {
     id: "sourcing-supply",
     title: "Hardware Sourcing & Supply",
-    short: "Certified new, refurbished, and pre-owned switches, servers, routers, RAM, fiber optics, and transceivers.",
-    body: "PAN-India hardware logistics. We maintain direct inventory and supply links for Cisco, Juniper, Fortinet, Dell, and HP hardware, dramatically reducing IT Capex.",
+    short: "Certified new, refurbished and pre-owned switches, servers, routers, RAM, fiber optics and transceivers.",
+    body: "PAN-India hardware logistics. We maintain direct inventory and supply links for Cisco, Juniper, Fortinet, Dell and HP hardware, dramatically reducing IT Capex.",
     iconName: "Network",
     imageUrl: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop"
   },
   {
     id: "hardware-rentals",
     title: "Enterprise Hardware Rentals",
-    short: "Short and long term rental plans for testing labs, temporary server deployments, and event networks.",
-    body: "Reduce temporary infrastructure deployment costs. We offer switches, routers, and server rentals with flexible short term and long term lease packages.",
+    short: "Short and long term rental plans for testing labs, temporary server deployments and event networks.",
+    body: "Reduce temporary infrastructure deployment costs. We offer switches, routers and server rentals with flexible short term and long term lease packages.",
     iconName: "Clock",
     imageUrl: "https://images.unsplash.com/photo-1563770660941-20978e870e26?q=80&w=800&auto=format&fit=crop"
   }

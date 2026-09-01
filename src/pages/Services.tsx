@@ -18,7 +18,7 @@ export function Services() {
             IT Engineering &amp; <span className="text-primary-green">Hardware Solutions</span>
           </h1>
           <p className="font-sans text-body-text max-w-2xl text-sm sm:text-base leading-relaxed">
-            We provide comprehensive technical support, device flashing, rentals, and physical server room cable management.
+            We provide comprehensive technical support, device flashing, rentals and physical server room cable management.
           </p>
         </Container>
       </section>
