@@ -206,8 +206,8 @@ export const sbnServices: ServiceCat[] = [
   {
     id: "hardware-rentals",
     title: "Enterprise Hardware Rentals",
-    short: "Short- and long-term rental plans for testing labs, temporary server deployments, and event networks.",
-    body: "Reduce temporary infrastructure deployment costs. We offer switches, routers, and server rentals with flexible short-term and long-term lease packages.",
+    short: "Short and long term rental plans for testing labs, temporary server deployments, and event networks.",
+    body: "Reduce temporary infrastructure deployment costs. We offer switches, routers, and server rentals with flexible short term and long term lease packages.",
     iconName: "Clock",
     imageUrl: "https://images.unsplash.com/photo-1563770660941-20978e870e26?q=80&w=800&auto=format&fit=crop"
   }
