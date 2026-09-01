@@ -24,7 +24,7 @@ export function Products() {
             New &amp; Refurbished <span className="text-primary-green">Networking Gear</span>
           </h1>
           <p className="font-sans text-body-text max-w-2xl text-sm sm:text-base leading-relaxed">
-            PAN-India sourcing for routers, managed switch configurations, SFP modules, and high-density computing servers.
+            PAN-India sourcing for routers, managed switch configurations, SFP modules and high-density computing servers.
           </p>
         </Container>
       </section>

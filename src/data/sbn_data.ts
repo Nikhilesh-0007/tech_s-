@@ -101,42 +101,42 @@ export const sbnProducts: ProductCat[] = [
   {
     id: "switches",
     title: "Switches",
-    desc: "Enterprise managed, PoE, and fiber optical switches for core, distribution, and edge routing.",
+    desc: "Enterprise managed, PoE and fiber optical switches for core, distribution and edge routing.",
     iconName: "Network",
     imageUrl: "/products/switch.jpeg"
   },
   {
     id: "servers",
     title: "Servers",
-    desc: "Rack and tower servers configured with custom CPUs, RAM, power supplies, and storage arrays.",
+    desc: "Rack and tower servers configured with custom CPUs, RAM, power supplies and storage arrays.",
     iconName: "Server",
     imageUrl: "/products/Server.jpeg"
   },
   {
     id: "routers",
     title: "Routers",
-    desc: "High-capacity core and edge routers for offices, branches, and wide-area networking tunnels.",
+    desc: "High-capacity core and edge routers for offices, branches and wide-area networking tunnels.",
     iconName: "Cpu",
     imageUrl: "/products/router.jpeg"
   },
   {
     id: "firewalls",
     title: "Firewalls",
-    desc: "Next-gen security appliances for secure perimeter shielding, threat checking, and VPN tunnels.",
+    desc: "Next-gen security appliances for secure perimeter shielding, threat checking and VPN tunnels.",
     iconName: "Shield",
     imageUrl: "/products/Firewall.jpeg"
   },
   {
     id: "ram",
     title: "Server RAM",
-    desc: "High-speed DDR3, DDR4, and DDR5 ECC registered memory modules for server virtualization loads.",
+    desc: "High-speed DDR3, DDR4 and DDR5 ECC registered memory modules for server virtualization loads.",
     iconName: "Layers",
     imageUrl: "/products/Server%20Ram.jpeg"
   },
   {
     id: "sfp",
     title: "SFP Transceivers",
-    desc: "1G, 10G, and 25G transceivers for reliable optical fiber links across enterprise switches.",
+    desc: "1G, 10G and 25G transceivers for reliable optical fiber links across enterprise switches.",
     iconName: "Zap",
     imageUrl: "/products/SFP.jpeg"
   },
@@ -150,7 +150,7 @@ export const sbnProducts: ProductCat[] = [
   {
     id: "ip-phones",
     title: "IP Phones",
-    desc: "Enterprise VoIP desk phones, expansion modules, and conference terminals for clear business communication.",
+    desc: "Enterprise VoIP desk phones, expansion modules and conference terminals for clear business communication.",
     iconName: "Phone",
     imageUrl: "/products/IP%20Phones.jpeg"
   },
