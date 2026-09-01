@@ -39,7 +39,7 @@ export const sbnProfile = {
   ],
   about: {
     heading: "Reliable Networking Hardware. Practical Infrastructure Solutions.",
-    body: "CISTECH Solutions carries a full range of New & Refurbished Networking Hardware. We serve customers pan India and globally, with active supplies to international markets like the UAE, China, South Korea, and the USA.",
+    body: "CISTECH Solutions carries a full range of New & Refurbished Networking Hardware. We serve customers pan India and globally.",
     range: [
       "Routers",
       "Switches",
@@ -84,7 +84,6 @@ export const sbnProfile = {
     days: "Monday – Friday: 11:00 AM – 7:00 PM",
     time: "Saturday: 11:00 AM – 3:00 PM | Sunday: Closed"
   },
-  ceo: "Dadapeer",
   gstin: "29EALPA2570Q1Z4",
   maps: {
     share: "https://maps.app.goo.gl/2ZExqkCKFWr6cs2n6",

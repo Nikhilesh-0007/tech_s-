@@ -5,17 +5,18 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-[#080d0a] text-white pt-16 pb-8 border-t-2 border-primary-green/40">
-      <Container>
+    <footer className="bg-gradient-to-b from-[#081810] to-[#040e08] text-white pt-16 pb-8 border-t-2 border-primary-green/40 relative overflow-hidden">
+      <div className="absolute inset-0 bg-grid-pattern-dark opacity-40 pointer-events-none" />
+      <Container className="relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand Col */}
           <div className="flex flex-col gap-4">
             <Link to="/" className="flex items-center gap-4 group self-start">
-              <div className="w-16 h-16 rounded-2xl bg-white p-2 flex items-center justify-center shrink-0 shadow-lg transition-transform duration-300 group-hover:scale-105">
+              <div className="w-16 h-16 rounded-full bg-white p-1 flex items-center justify-center shrink-0 shadow-[0_4px_20px_rgba(0,106,47,0.3)] border border-primary-green/30 transition-transform duration-300 group-hover:scale-105">
                 <img
                   src="/logo.png"
                   alt="CISTECH Solutions Logo"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain rounded-full"
                 />
               </div>
               <div className="flex flex-col">

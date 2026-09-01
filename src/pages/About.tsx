@@ -35,21 +35,9 @@ export function About() {
               <p className="font-sans text-body-text leading-relaxed mb-4">
                 {sbnProfile.about.body}
               </p>
-              <p className="font-sans text-body-text leading-relaxed mb-6">
-                Under corporate standards led by our management coordinator, {sbnProfile.ceo}, we help companies scale operations. We acquire off-lease server hardware and enterprise switch assets, replacing worn nodes and certifying them to prevent downtime.
+              <p className="font-sans text-body-text leading-relaxed">
+                Under rigorous corporate standards, we help companies scale operations. We acquire off-lease server hardware and enterprise switch assets, replacing worn nodes and certifying them to prevent downtime.
               </p>
-              
-              <div className="bg-soft-bg border border-border-green/60 p-5 rounded-[8px] flex flex-col gap-2">
-                <div className="text-xs font-mono text-body-text uppercase tracking-wider">
-                  Operational Credentials
-                </div>
-                <div className="text-sm font-heading font-bold text-dark-text">
-                  GSTIN Verification: <span className="font-mono text-primary-green">{sbnProfile.gstin}</span>
-                </div>
-                <div className="text-sm font-heading font-bold text-dark-text">
-                  CEO / Administrator: <span className="text-primary-green">{sbnProfile.ceo}</span>
-                </div>
-              </div>
             </div>
 
             {/* Hardware list */}
